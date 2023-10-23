@@ -12,3 +12,9 @@ In this paper, we present a simple yet effective framework to alleviate _exposur
 - `cd ./compare-mt`
 - `pip install -r requirements.txt`
 - `python setup.py install`
+
+## Training
+For CNNDM dataset, we run the code below:
+```console
+python ./src/main.py --cuda --gpuid 1 --config cnndm -l
+```
