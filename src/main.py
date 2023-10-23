@@ -81,7 +81,7 @@ def evaluation(args):
         tok = PegasusTokenizer.from_pretrained(args.model_type)
     else:
         tok = BartTokenizer.from_pretrained(args.model_type)
-    root_path = '/data/xiejiawen/data'
+    root_path = 'data path'
     collate_fn = partial(collate_mp, pad_token_id=tok.pad_token_id, is_test=True)
     test_set = CustomDataset(os.path.join(root_path, f"{args.dataset}/{args.datatype}/test"), args.model_type, is_test=True, max_len=1024,
      is_sorted=False, max_num=args.max_num, is_untok=True, total_len=args.total_len, is_pegasus=args.is_pegasus)
@@ -90,7 +90,6 @@ def evaluation(args):
     # build models
     model_path = args.pretrained if args.pretrained is not None else args.model_type
     model = SimMCS(model_path, tok.pad_token_id, args.is_pegasus)
-    # model = BartForConditionalGeneration.from_pretrained(model_path)
     if args.cuda:
         model = model.cuda()
 
@@ -370,8 +369,7 @@ def run(rank, args):
     torch.cuda.manual_seed_all(args.seed)
     np.random.seed(args.seed)
     random.seed(args.seed)
-
-    root_path = '/nas/xiejiawen/data'
+    root_path = 'data path'
     
     gpuid = args.gpuid[rank]
     # gpuid = rank
