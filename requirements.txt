@@ -3,3 +3,4 @@ pyrouge
 tensorboard
 sentencepiece
 nltk
+wandb
