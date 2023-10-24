@@ -4,7 +4,6 @@ This repository contains the code for our paper [Alleviating Exposure Bias via M
 In this paper, we present a simple yet effective framework to alleviate _exposure bias_ from two different perspectives in abstractive summarization.
 ![overview](./overview.png)
 ## Installation
-- `python3.10`
 - `conda create --name env --file spec-file.txt`
 - `conda activate env`
 - `pip install -r requirements.txt`
