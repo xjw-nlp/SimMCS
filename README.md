@@ -16,6 +16,9 @@ In this paper, we present a simple yet effective framework to alleviate _exposur
 - `pip install -r requirements.txt`
 - `python setup.py install`
 
+## Datasets
+You can download our preprocessed datasets [cnndm](https://drive.google.com/drive/folders/1mgAVb0vrkictkm7B5jZt8yBqU71szfOS) and [xsum](https://drive.google.com/drive/folders/1mgAVb0vrkictkm7B5jZt8yBqU71szfOS) to conduct our experiments.
+
 ## Training
 For CNNDM dataset, we run the code below:
 ```console
